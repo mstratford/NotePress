@@ -93,6 +93,7 @@ $row = mysql_fetch_array(mysql_query("SELECT * FROM users"));
 		}
 		if(isset($_SESSION['user'])){
 		?>
+		<a href="new.php" class="boxtuffs"><strong>Add Note</strong></a><br>
 		<a href="logout.php" class="boxtuffs"><strong>Logout</strong></a><br>
 		<?php
 		}
