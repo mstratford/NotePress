@@ -1,0 +1,18 @@
+Please report bugs or fork this please!
+
+Step 1. Edit connect.php with your database details.
+
+Step 2. Import NotePress.sql into your database.
+
+Step 3. Visit the folder you installed it to. It will redirect into /register.
+
+Step 4. Fill in the details required to register.
+
+Step 5. Delete the register page.
+
+Step 6. Login and add a new note! 
+
+Tips: 
+- Scroll to the bottom to add a note and login.
+- If you edit a note it will get bumped.
+- Just click a note to edit it. 
