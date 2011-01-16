@@ -4,6 +4,12 @@ $result = mysql_query("SELECT * FROM users") or die(mysql_error());
 if(mysql_num_rows($result) == 0){
 die(header("Location: register"));
 }
+	
+	function clickable($url){
+	$url = stripslashes($url);
+$url = preg_replace("/\b(?:(?:https?|ftp):\/\/|www\.)[-a-z0-9+&@#\/%?=~_|!:,.;]*[-a-z0-9+&@#\/%=~_|]/i", '<a class="click" href="$0" target="_blank">$0</a>', $url);
+return $url;
+}	
 
 $row = mysql_fetch_array(mysql_query("SELECT * FROM users"));
 ?>
@@ -64,7 +70,7 @@ $row = mysql_fetch_array(mysql_query("SELECT * FROM users"));
 			<div class="note">
 			<div class="tape"></div>
 				<div class="text">
-					<p><?php echo stripslashes($row['body']);?></p>
+					<p><?php echo clickable($row['body']);?></p>
 							</div>
 				<div class="line"></div>
 				<div class="bg"></div>
