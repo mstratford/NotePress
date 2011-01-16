@@ -42,8 +42,10 @@ $row = mysql_fetch_array($result);
 			</div>
 								<span class="new"><a class="l-1" title="Add Note" >Add Note</a></span><br><br>
 			</div>
-		
-	
+			
+		<a href="index.php" class="boxtuffs"><strong>View Notes</strong></a><br>
+		<a href="logout.php" class="boxtuffs"><strong>Logout</strong></a><br>
+			
 		<a href="http://boxtuffs.com" class="boxtuffs"> Design from <strong>boxtuffs.com</strong></a>
 	</div>
 
