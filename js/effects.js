@@ -54,8 +54,11 @@ $('.l-1').fadeOut("slow");
    url: "post.php",
    data: "note="+note,
    success: function(msg){
-$('.l-1').text(msg);
-
+$('.l-1').fadeOut("slow");
+   $('.l-1').fadeIn("slow", function(){
+         $('.l-1').text(msg);
+   });
+   
    }
  });
  
