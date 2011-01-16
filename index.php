@@ -97,7 +97,7 @@ $row = mysql_fetch_array(mysql_query("SELECT * FROM users"));
 		<a href="logout.php" class="boxtuffs"><strong>Logout</strong></a><br>
 		<?php
 		}
-		?>			<a href="http://zackify.net/notepress" class="boxtuffs"> Made With <strong>NotePress</strong></a>
+		?>			<a href="https://github.com/zackify/NotePress" class="boxtuffs"> Made With <strong>NotePress</strong></a>
 	</div>
 
 </div>
