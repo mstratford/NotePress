@@ -3,7 +3,9 @@
 * {~
 
 }
-
+a.click{
+text-decoration: none;
+}
 ::selection{
 	background-color:#55595c;
 	color:#fff;
