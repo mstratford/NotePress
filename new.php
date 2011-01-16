@@ -1,12 +1,17 @@
 <?php
 require("connect.php");
-$row = mysql_fetch_array(mysql_query("SELECT * FROM info"));
+if(!isset($_SESSION['user'])){
+die(header("Location: index.php"));
+}
+$result = mysql_query("SELECT * FROM users");
+
+$row = mysql_fetch_array($result);
 ?>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<title><?php echo $row['title'];?> - New Note</title>
+<title><?php echo stripslashes($row['title']);?> - New Note</title>
 <link href="styles/global.css" rel="stylesheet" type="text/css" media="screen" />
 <link href="styles/buttons.css" rel="stylesheet" type="text/css" media="screen" />
 <link href='http://fonts.googleapis.com/css?family=Lobster&subset=latin' rel='stylesheet' type='text/css'>
@@ -20,7 +25,7 @@ $row = mysql_fetch_array(mysql_query("SELECT * FROM info"));
 <div id="wrap">
 
 	<div id="my-notes">
-		<h1><?php echo $row['title'];?> - New</h1>
+		<h1><?php echo stripslashes($row['title']);?> - New</h1>
 		
 		<div id="notes">
 		
