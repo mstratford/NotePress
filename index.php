@@ -64,7 +64,7 @@ $row = mysql_fetch_array(mysql_query("SELECT * FROM users"));
 			<div class="note">
 			<div class="tape"></div>
 				<div class="text">
-					<p><?php echo $row['body'];?></p>
+					<p><?php echo stripslashes($row['body']);?></p>
 							</div>
 				<div class="line"></div>
 				<div class="bg"></div>
